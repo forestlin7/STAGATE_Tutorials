@@ -1,7 +1,6 @@
 # STAGATE_Tutorials
 
-
-# Installation Guide
+# 1 Installation Guide
 This document provides detailed instructions for installing and setting up the SpatialZ project. 
 Follow the steps below to configure your environment and install dependencies.
 
@@ -29,11 +28,11 @@ cd /path/to/your/SpatialZ_code
 pip install -r requirements.txt
 ```
 
-# Deploying a Docker Image on a New Server
+# 2 Deploying a Docker Image on a New Server
 
 We also provide a Docker image that encapsulates our code and demo data, making it easier for users to directly download and use the provided resources. This image ensures a consistent and reproducible environment, allowing users to seamlessly run the code and explore the demo data without needing to configure dependencies or environments manually.
 
-##  Install Docker on the New Server
+## Step 1: Install Docker on the New Server
 
 The following commands illustrate the basic steps to install Docker on Ubuntu system (Ubuntu system required):
 
@@ -42,7 +41,7 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 
-## Pull the Image from Docker Hub
+## Step 2: Pull the Image from Docker Hub
 
 To download the Docker image, execute the following command:
 
@@ -50,7 +49,7 @@ To download the Docker image, execute the following command:
 sudo docker pull linsenlin/spatialz:latest
 ```
 
-## 3. Launch the Docker Container on the New Server
+## Step 3: Launch the Docker Container on the New Server
 
 Once the image is pulled, users can start the Docker container on the new server. The following command will run the container and map port 8888 of the server to port 8888 of the container:
  
@@ -58,10 +57,8 @@ Once the image is pulled, users can start the Docker container on the new server
 sudo docker run --gpus all -p 8888:8888 linsenlin/spatialz:latest
 ```
 
-## 4. Access Jupyter Notebook
+## Step 4: Access Jupyter Notebook
 
 After launching the Docker container, users can access Jupyter Notebook by navigating to port 8888 on the server. If the server's IP address is 'server_ip', simply enter the following URL in a web browser:
 
 `http://server_ip:8888`
-
- 
